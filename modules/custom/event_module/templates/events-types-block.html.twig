@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * Default theme implementation for rendering events within block.
+ *
+ * This template is used to list the events on block.
+ *
+ * Available variables:
+ * - events_types : Events Type.
+ *   - title : The Block title.
+ *   - current_tid: Current taxnonomy term id.
+ *   - name : The event name.
+ *   - events_count : The count of events in respect of current tid.
+
+ * @see template_preprocess_events_types_block()
+ *
+ * @ingroup themeable
+ */
+#}
+<article class="event_module_block">
+<h2 class="block-title">{{ title }}</h2>
+{% if events_types %}
+    {% for event_type in events_types %}
+        <div class="events-type-link">
+            {% if current_tid == event_type.tid %}
+                {{ event_type.name }}
+            {% else %}
+                <a href="/view-events/{{ event_type.tid }}">{{ event_type.name }}</a>
+            {% endif %}    
+            ({{ event_type.events_count }})
+        </div>      
+    {% endfor %}
+{% else %}
+    <h3>{{ 'No any events found.'|t }}</h3> 
+{% endif %}
+</article>
+

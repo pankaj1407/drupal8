@@ -1,0 +1,40 @@
+{#
+/**
+ * @file
+ * Default theme implementation for rendering events within a page.
+ *
+ * This template is used to list the events on page.
+ *
+ * Available variables:
+ * - events : Array of events.
+ *   - id : The event ID.
+ *   - name: The event name.
+ *   - t_name : Event type
+ *   - event_date : The event date.
+ *   - venue : The event venue
+ *   - description__value : Description of Event
+ *   - pager :  Pagination
+ *
+ * @see template_preprocess_events_list()
+ *
+ * @ingroup themeable
+ */
+#}
+<article class="event_module">
+
+{% if events %}
+    {% set events_data = events|slice(0,-1) %}
+    {% for event in events_data %}
+      <h2 class="title"><a href="/content/event_entity/{{ event.id }}">{{ event.name }}</a></h2>
+      <div class="field_event_type"><span><strong>{{ 'Event Type'|t }} :</strong></span> {{ event.t_name }}</div>
+      <div class="field_event_date"><span><strong>{{ 'Event Date'|t }} :</strong></span> {{ event.event_date|date('d M Y') }}</div>
+      <div class="field_event_venue"><span><strong>{{ 'Event Venue'|t }} :</strong></span> {{ event.venue }}</div>
+      <div class="field_event_details"><span><strong>{{ 'Event Details'|t }}</strong></span> : {{ event.description__value|raw }}</div>
+      <div class="event-subscribe-wrapper"><input type="checkbox" name="chk_subscribe[]" class="event-subscribe-checkbox form-control" value="{{ event.id }}"><span><strong> {{ 'Subscribe'|t }}</strong></span></div>
+    {% endfor %}
+    {{ events.pager }}
+{% else %}
+    <h3>{{ 'No any events found.'|t }}</h3> 
+{% endif %}
+</article>
+

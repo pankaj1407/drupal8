@@ -1,0 +1,5 @@
+name: Event Module
+type: module
+description: 'This module will be used to manage the events'
+core: 8.x
+package: 'Custom'

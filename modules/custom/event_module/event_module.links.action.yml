@@ -1,0 +1,10 @@
+entity.event_entity.add_form:
+  route_name: entity.event_entity.add_form
+  title: 'Add Event entity'
+  appears_on:
+    - entity.event_entity.collection
+entity.event_subscriber.add_form:
+  route_name: entity.event_subscriber.add_form
+  title: 'Add Event subscriber'
+  appears_on:
+    - entity.event_subscriber.collection

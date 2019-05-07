@@ -1,0 +1,27 @@
+<?php
+
+ /**
+  * Implements hook_install().
+  */
+function event_module_install() {
+
+    $vocabulary = \Drupal\taxonomy\Entity\Vocabulary::create(array(
+        'vid' => 'event_type',
+        'description' => t('This vocabulary will be used to categorize the events'),
+        'name' => t('Event Type'),
+    ));
+    $vocabulary->save();
+    
+}
+
+
+ /**
+  * Implements hook_uninstall().
+  */
+function event_module_uninstall() {
+    
+    $vocabulary = \Drupal\taxonomy\Entity\Vocabulary::load('event_type');
+    if ($vocabulary) {
+        $vocabulary->delete();
+    }
+}

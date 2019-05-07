@@ -1,0 +1,12 @@
+event_module.assets:
+  version: 1.x
+  css:
+    theme:
+      css/event-module.css: {}  
+    
+event_module.subscribe:
+  version: 1.x
+  js:
+    js/event-module.js: {}
+  dependencies:
+    - core/jquery      

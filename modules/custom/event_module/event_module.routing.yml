@@ -1,0 +1,23 @@
+event_module.view:
+  path: '/view-events'
+  defaults:
+    _controller: '\Drupal\event_module\Controller\EventController::viewEvents'
+    _title: 'Events'
+  requirements:
+    _permission: 'access content'
+    
+event_module.view_by_event_type:
+  path: '/view-events/{tid}'
+  defaults:
+    _controller: '\Drupal\event_module\Controller\EventController::viewEventsByType'
+    _title: 'Events'
+  requirements:
+    _permission: 'access content'    
+    
+event_module.subscribe.ajax:
+  path: '/ajax-subscribe'
+  defaults:
+    _controller: '\Drupal\event_module\Controller\EventController::subscribeEvents'
+    _title: 'Subscribe Events'
+  requirements:
+    _permission: 'access content'    

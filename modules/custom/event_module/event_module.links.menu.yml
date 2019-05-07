@@ -1,0 +1,34 @@
+
+# Event entity menu items definition
+entity.event_entity.collection:
+  title: 'Event entity list'
+  route_name: entity.event_entity.collection
+  description: 'List Event entity entities'
+  parent: system.admin_structure
+  weight: 100
+
+event_entity.admin.structure.settings:
+  title: 'Event entity settings'
+  description: 'Configure Event entity entities'
+  route_name: event_entity.settings
+  parent: system.admin_structure
+
+event_module.menu_view_event:
+  title: Events
+  menu_name: main
+  route_name: event_module.view
+  expanded: TRUE
+  weight: 120
+# Event subscriber menu items definition
+entity.event_subscriber.collection:
+  title: 'Event subscriber list'
+  route_name: entity.event_subscriber.collection
+  description: 'List Event subscriber entities'
+  parent: system.admin_structure
+  weight: 100
+
+event_subscriber.admin.structure.settings:
+  title: 'Event subscriber settings'
+  description: 'Configure Event subscriber entities'
+  route_name: event_subscriber.settings
+  parent: system.admin_structure

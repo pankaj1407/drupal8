@@ -1,0 +1,3 @@
+services:
+  event_module.subscription_manager:
+    class: Drupal\event_module\Subscription\SubscriptionManager    

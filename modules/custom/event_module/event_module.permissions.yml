@@ -1,0 +1,38 @@
+add event entity entities:
+  title: 'Create new Event entity entities'
+
+administer event entity entities:
+  title: 'Administer Event entity entities'
+  description: 'Allow to access the administration form to configure Event entity entities.'
+  restrict access: true
+
+delete event entity entities:
+  title: 'Delete Event entity entities'
+
+edit event entity entities:
+  title: 'Edit Event entity entities'
+
+view published event entity entities:
+  title: 'View published Event entity entities'
+
+view unpublished event entity entities:
+  title: 'View unpublished Event entity entities'
+add event subscriber entities:
+  title: 'Create new Event subscriber entities'
+
+administer event subscriber entities:
+  title: 'Administer Event subscriber entities'
+  description: 'Allow to access the administration form to configure Event subscriber entities.'
+  restrict access: true
+
+delete event subscriber entities:
+  title: 'Delete Event subscriber entities'
+
+edit event subscriber entities:
+  title: 'Edit Event subscriber entities'
+
+view published event subscriber entities:
+  title: 'View Active Event subscriber entities'
+
+view unpublished event subscriber entities:
+  title: 'View De-activated Event subscriber entities'
